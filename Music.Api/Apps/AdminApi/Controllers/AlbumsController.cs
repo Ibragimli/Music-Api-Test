@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,8 +15,9 @@ using System.Threading.Tasks;
 
 namespace Music.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("admin/api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class AlbumsController : ControllerBase
     {
         private readonly DataContext _context;

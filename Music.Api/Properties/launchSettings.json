@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/albums",
+      "launchUrl": "admin/api/albums",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
